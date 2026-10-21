@@ -116,13 +116,13 @@ class MainActivity : Activity() {
             text = SimpleDateFormat("EEEE, d. MMMM", Locale.getDefault()).format(Date())
                 .replaceFirstChar { it.uppercase() }
             textSize = 13f
-            setTextColor(secondary)
+            setTextColor(this@MainActivity.secondary)
         }
         val settings = TextView(this).apply {
             text = "⚙"
             textSize = 24f
             gravity = Gravity.CENTER
-            setTextColor(foreground)
+            setTextColor(this@MainActivity.foreground)
             background = rounded(surface, 18)
             setOnClickListener { startActivity(Intent(this@MainActivity, SettingsActivity::class.java)) }
             contentDescription = "Einstellungen"
@@ -144,21 +144,21 @@ class MainActivity : Activity() {
             textSize = 64f
             letterSpacing = -0.045f
             typeface = Typeface.create("sans-serif-light", Typeface.NORMAL)
-            setTextColor(foreground)
+            setTextColor(this@MainActivity.foreground)
         }
         body.addView(clock)
         val subtitle = TextView(this).apply {
             text = "Einfach. Flüssig. Deins."
             textSize = 15f
-            setTextColor(secondary)
+            setTextColor(this@MainActivity.secondary)
         }
         body.addView(subtitle)
 
         val search = EditText(this).apply {
             hint = "Apps suchen"
             textSize = 15f
-            singleLine = true
-            setTextColor(foreground)
+            isSingleLine = true
+            setTextColor(this@MainActivity.foreground)
             setHintTextColor(secondary)
             background = rounded(surface, 22)
             compoundDrawablePadding = dp(10)
@@ -173,11 +173,11 @@ class MainActivity : Activity() {
         val pageRow = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
         val pageTitle = TextView(this).apply {
             text = when (page) { 1 -> "Deine Favoriten"; 2 -> "Widgets & Tools"; else -> "Deine Apps" }
-            textSize = 19f; typeface = Typeface.DEFAULT_BOLD; setTextColor(foreground)
+            textSize = 19f; typeface = Typeface.DEFAULT_BOLD; setTextColor(this@MainActivity.foreground)
         }
         val pageHint = TextView(this).apply {
             text = "  ${page + 1}/$homePages  ›"
-            textSize = 13f; setTextColor(secondary)
+            textSize = 13f; setTextColor(this@MainActivity.secondary)
             setOnClickListener { page = (page + 1) % homePages; showHome() }
         }
         pageRow.addView(pageTitle)
@@ -244,7 +244,7 @@ class MainActivity : Activity() {
 
     private fun addAppGrid(parent: LinearLayout, apps: List<AppEntry>, columns: Int) {
         if (apps.isEmpty()) {
-            val empty = TextView(this).apply { text = "Noch keine Apps gefunden."; setTextColor(secondary); setPadding(0, dp(20), 0, dp(20)) }
+            val empty = TextView(this).apply { text = "Noch keine Apps gefunden."; setTextColor(this@MainActivity.secondary); setPadding(0, dp(20), 0, dp(20)) }
             parent.addView(empty); return
         }
         val colCount = columns.coerceIn(3, 6)
@@ -291,7 +291,7 @@ class MainActivity : Activity() {
         if (LauncherPrefs.labels(this)) {
             val label = TextView(this).apply {
                 text = app.label; textSize = 11.5f; gravity = Gravity.CENTER
-                setTextColor(foreground); maxLines = 1; ellipsize = android.text.TextUtils.TruncateAt.END
+                setTextColor(this@MainActivity.foreground); maxLines = 1; ellipsize = android.text.TextUtils.TruncateAt.END
             }
             tile.addView(label, LinearLayout.LayoutParams(-1, dp(28)))
         }
@@ -305,7 +305,7 @@ class MainActivity : Activity() {
         } else {
             box.addView(TextView(this).apply { text = icon.toString(); textSize = 25f; gravity = Gravity.CENTER; setTextColor(accent) }, LinearLayout.LayoutParams(dp(30), dp(30)))
         }
-        if (LauncherPrefs.labels(this)) box.addView(TextView(this).apply { text = label; textSize = 10f; setTextColor(secondary); gravity = Gravity.CENTER })
+        if (LauncherPrefs.labels(this)) box.addView(TextView(this).apply { text = label; textSize = 10f; setTextColor(this@MainActivity.secondary); gravity = Gravity.CENTER })
         return box
     }
 
@@ -317,7 +317,7 @@ class MainActivity : Activity() {
         addAppGrid(parent, apps.take(16), LauncherPrefs.grid(this))
         val note = TextView(this).apply {
             text = if (favs.isEmpty()) "Tipp: Halte ein App-Icon gedrückt, um Optionen zu öffnen. Favoriten lassen sich in den Einstellungen verwalten." else "Deine gespeicherten Favoriten"
-            textSize = 13f; setTextColor(secondary); setPadding(0, dp(10), 0, 0)
+            textSize = 13f; setTextColor(this@MainActivity.secondary); setPadding(0, dp(10), 0, 0)
         }
         parent.addView(note)
     }
@@ -328,10 +328,10 @@ class MainActivity : Activity() {
             background = rounded(surface, 26)
             setPadding(dp(18), dp(18), dp(18), dp(18))
         }
-        card.addView(TextView(this).apply { text = "Widgets"; textSize = 20f; typeface = Typeface.DEFAULT_BOLD; setTextColor(foreground) })
+        card.addView(TextView(this).apply { text = "Widgets"; textSize = 20f; typeface = Typeface.DEFAULT_BOLD; setTextColor(this@MainActivity.foreground) })
         card.addView(TextView(this).apply {
             text = "Füge Android-Widgets über die Schaltfläche hinzu. Die Widget-Auswahl wird vom System bereitgestellt."
-            textSize = 13f; setTextColor(secondary); setPadding(0, dp(8), 0, dp(16))
+            textSize = 13f; setTextColor(this@MainActivity.secondary); setPadding(0, dp(8), 0, dp(16))
         })
         val add = Button(this).apply {
             text = "＋ Widget hinzufügen"
@@ -382,16 +382,16 @@ class MainActivity : Activity() {
         baseLayout()
         val header = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
         header.addView(TextView(this).apply {
-            text = "Alle Apps"; textSize = 26f; typeface = Typeface.create("sans-serif-medium", Typeface.NORMAL); setTextColor(foreground)
+            text = "Alle Apps"; textSize = 26f; typeface = Typeface.create("sans-serif-medium", Typeface.NORMAL); setTextColor(this@MainActivity.foreground)
         }, LinearLayout.LayoutParams(0, dp(52), 1f))
         header.addView(TextView(this).apply {
-            text = "✕"; textSize = 22f; gravity = Gravity.CENTER; setTextColor(foreground)
+            text = "✕"; textSize = 22f; gravity = Gravity.CENTER; setTextColor(this@MainActivity.foreground)
             setOnClickListener { showHome() }
         }, LinearLayout.LayoutParams(dp(44), dp(52)))
         root.addView(header)
         val search = EditText(this).apply {
-            hint = "Suchen…"; textSize = 15f; singleLine = true
-            setTextColor(foreground); setHintTextColor(secondary); background = rounded(surface, 20)
+            hint = "Suchen…"; textSize = 15f; isSingleLine = true
+            setTextColor(this@MainActivity.foreground); setHintTextColor(secondary); background = rounded(surface, 20)
             setPadding(dp(16), 0, dp(16), 0)
         }
         root.addView(search, LinearLayout.LayoutParams(-1, dp(52)).apply { topMargin = dp(8); bottomMargin = dp(12) })
@@ -409,7 +409,7 @@ class MainActivity : Activity() {
                 repeat(cols - apps.size) { row.addView(View(this), LinearLayout.LayoutParams(0, dp(104), 1f)) }
                 list.addView(row)
             }
-            if (filtered.isEmpty()) list.addView(TextView(this).apply { text = "Keine Treffer"; setTextColor(secondary); setPadding(0, dp(20), 0, 0) })
+            if (filtered.isEmpty()) list.addView(TextView(this).apply { text = "Keine Treffer"; setTextColor(this@MainActivity.secondary); setPadding(0, dp(20), 0, 0) })
         }
         search.setText(initial)
         render(initial)
