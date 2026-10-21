@@ -1,0 +1,67 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:1:1-22:12
+INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:1:1-22:12
+INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:1:1-22:12
+INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:1:1-22:12
+	package
+		INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.QUERY_ALL_PACKAGES
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:2:5-77
+	android:name
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:2:22-74
+application
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:3:5-21:19
+INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:3:5-21:19
+	android:extractNativeLibs
+		INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml
+	android:label
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:5:9-40
+	android:allowBackup
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:4:9-35
+	android:theme
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:6:9-72
+	android:usesCleartextTraffic
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:7:9-45
+activity#dev.endervven.oxygenlauncher.SettingsActivity
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:8:9-10:40
+	android:exported
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:10:13-37
+	android:name
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:9:13-45
+activity#dev.endervven.oxygenlauncher.MainActivity
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:11:9-20:20
+	android:exported
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:14:13-36
+	android:configChanges
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:13:13-74
+	android:name
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:12:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.HOME
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:16:25-66
+category#android.intent.category.HOME
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:17:17-73
+	android:name
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:17:27-70
+category#android.intent.category.DEFAULT
+ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:18:17-76
+	android:name
+		ADDED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml:18:27-73
+uses-sdk
+INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml
+INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/AndroidManifest.xml

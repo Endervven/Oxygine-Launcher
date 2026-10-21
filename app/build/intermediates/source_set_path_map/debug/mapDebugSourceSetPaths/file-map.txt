@@ -1,0 +1,7 @@
+dev.endervven.oxygenlauncher.app-pngs-0 /home/droid/OxygenLauncher/OxygenLauncher/app/build/generated/res/pngs/debug
+dev.endervven.oxygenlauncher.app-resValues-1 /home/droid/OxygenLauncher/OxygenLauncher/app/build/generated/res/resValues/debug
+dev.endervven.oxygenlauncher.app-packageDebugResources-2 /home/droid/OxygenLauncher/OxygenLauncher/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+dev.endervven.oxygenlauncher.app-packageDebugResources-3 /home/droid/OxygenLauncher/OxygenLauncher/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+dev.endervven.oxygenlauncher.app-debug-4 /home/droid/OxygenLauncher/OxygenLauncher/app/build/intermediates/merged_res/debug/mergeDebugResources
+dev.endervven.oxygenlauncher.app-debug-5 /home/droid/OxygenLauncher/OxygenLauncher/app/src/debug/res
+dev.endervven.oxygenlauncher.app-main-6 /home/droid/OxygenLauncher/OxygenLauncher/app/src/main/res
