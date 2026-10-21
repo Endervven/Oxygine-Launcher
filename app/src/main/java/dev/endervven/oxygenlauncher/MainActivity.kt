@@ -101,8 +101,26 @@ class MainActivity : Activity() {
             clipToPadding = false
             setPadding(dp(20), dp(14), dp(20), dp(8))
         }
+
         content = FrameLayout(this)
         setContentView(root)
+
+        if (android.os.Build.VERSION.SDK_INT >= 30) {
+            root.setOnApplyWindowInsetsListener { view, insets ->
+                val bars = insets.getInsets(
+                    android.view.WindowInsets.Type.systemBars()
+                )
+                view.setPadding(
+                    dp(20),
+                    bars.top + dp(14),
+                    dp(20),
+                    bars.bottom + dp(8)
+                )
+                insets
+            }
+            root.requestApplyInsets()
+        }
+
         return root
     }
 
