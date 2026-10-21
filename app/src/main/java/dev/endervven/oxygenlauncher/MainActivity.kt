@@ -55,6 +55,7 @@ class MainActivity : Activity() {
         window.decorView.systemUiVisibility = if (!LauncherPrefs.dark(this)) {
             View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
         } else 0
+        window.setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
         appHost = AppWidgetHost(this, widgetHostId)
         appHost.startListening()
         loadApps()
